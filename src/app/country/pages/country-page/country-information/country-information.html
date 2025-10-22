@@ -1,0 +1,38 @@
+<div class="stats shadow mt-2 flex justify-center">
+  <div class="stat">
+    <div class="stat-figure text-primary">
+    </div>
+    <div class="stat-title">Pais</div>
+    <div class="stat-value text-primary">{{country().name}}</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-figure text-secondary">
+    </div>
+    <div class="stat-title">Poblacion</div>
+    <div class="stat-value text-secondary">{{country().population | number}}</div>
+  </div>
+
+  <div class="stat">
+    <div class="stat-figure text-secondary">
+    </div>
+    <div class="stat-title">Escudo de armas</div>
+    <div class="stat-desc text-secondary">
+      <img class="w-32 h-32 object-contain" [src]="country().CoatOfArmsPng" alt="coat of arms">
+    </div>
+  </div>
+</div>
+
+
+<figure class="diff aspect-16/9" tabindex="0">
+  <div class="diff-item-1" role="img" tabindex="0">
+    <img alt="daisy" [src]="country().flagSvg" />
+  </div>
+  <div class="diff-item-2" role="img">
+    <img
+      alt="daisy"
+      class="blur brightness-75"
+      [src]="country().flagSvg" />
+  </div>
+  <div class="diff-resizer"></div>
+</figure>

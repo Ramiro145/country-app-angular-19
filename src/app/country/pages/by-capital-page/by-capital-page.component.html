@@ -1,12 +1,10 @@
-
-
-<country-search-input
-  (onSearchEmmit)="onSearch($event)"
-  placeholderInput="Buscar por capital"
->
-
+<country-search-input (onSearchEmmit)="query.set($event)" placeholderInput="Buscar por capital">
 </country-search-input>
 
+
 <country-list
-  [countries]="countries()"
+  [countries]="countryResource.value() ?? []"
+  [errorMessage]="countryResource.error()"
+  [isEmpty]="countryResource.value()?.length === 0"
+  [isLoading]="countryResource.isLoading()"
 ></country-list>

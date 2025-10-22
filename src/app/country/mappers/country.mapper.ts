@@ -9,9 +9,11 @@ export class CountryMapper{
       cca2: item.cca2,
       flag: item.flag,
       flagSvg:item.flags.svg,
-      name:item.name.common,
+      name:item.translations['spa'].official ?? 'No spanish name',
       capital:item.capital[0],
       population:item.population,
+      coatOfArmsSvg:item.coatOfArms.svg,
+      CoatOfArmsPng:item.coatOfArms.png
     }
   }
 

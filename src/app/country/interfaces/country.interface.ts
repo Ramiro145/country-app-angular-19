@@ -5,4 +5,6 @@ export interface Country{
   name:string;
   capital:string;
   population:number;
+  coatOfArmsSvg:string | undefined;
+  CoatOfArmsPng:string | undefined;
 }
